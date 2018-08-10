@@ -22,9 +22,7 @@ NC=''
 function download_node() {
   echo -e "Downloading and installing latest ${GREEN}$COIN_NAME${NC} coin daemon."
   cd $TMP_FOLDER >/dev/null 2>&1
-  wget -q $COIN_TGZ --show-progress
-  compile_error
-  tar -zvxf $COIN_TGZ >/dev/null 2>&1
+  wget -qO- $COIN_TGZ | tar xvz --show-progress
   compile_error
   rm $COIN_TGZ
   chmod +x *
