@@ -1,0 +1,26 @@
+# /etc/conf.d/bifrostd: config file for /etc/init.d/bifrostd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bifrost/bifrost.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bifrostd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bifrostd.pid"
+
+# Where to write bifrostd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bifrostd"
+
+# User and group to own bifrostd process
+#BITCOIND_USER="bifrost"
+#BITCOIND_GROUP="bifrost"
+
+# Path to bifrostd executable
+#BITCOIND_BIN="/usr/bin/bifrostd"
+
+# Nice value to run bifrostd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

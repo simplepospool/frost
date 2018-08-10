@@ -1,0 +1,26 @@
+[Unit]
+Description=Bifrost's distributed currency daemon
+After=network.target
+
+[Service]
+User=bifrost
+Group=bifrost
+
+Type=forking
+PIDFile=/var/lib/bifrostd/bifrostd.pid
+
+ExecStart=/usr/bin/bifrostd -daemon -pid=/var/lib/bifrostd/bifrostd.pid \
+          -conf=/etc/bifrost/bifrost.conf -datadir=/var/lib/bifrostd
+
+ExecStop=-/usr/bin/bifrost-cli -conf=/etc/bifrost/bifrost.conf \
+         -datadir=/var/lib/bifrostd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

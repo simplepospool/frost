@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bifrost
+Comment=Bifrost P2P Cryptocurrency
+Comment[fr]=Bifrost, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Bifrost, eşten eşe kriptografik sanal para birimi
+Exec=bifrost-qt %u
+Terminal=false
+Type=Application
+Icon=bifrost128
+MimeType=x-scheme-handler/bifrost;
+Categories=Office;Finance;
